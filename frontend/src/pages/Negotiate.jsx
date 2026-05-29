@@ -40,7 +40,7 @@ function ContextForm({ onStart }) {
   }
 
   const colorMap = {
-    blue: 'bg-blue-600/20 text-blue-400 border-blue-500/40',
+    blue: 'bg-red-800/30 text-red-400 border-red-600/40',
     emerald: 'bg-emerald-600/20 text-emerald-400 border-emerald-500/40',
     orange: 'bg-orange-600/20 text-orange-400 border-orange-500/40',
   }
@@ -181,9 +181,9 @@ function ChatMessage({ msg }) {
       <div className="flex justify-end animate-slide-up">
         <div className="max-w-[90%]">
           <p className="text-xs text-slate-500 mb-1 mr-1 text-right">Coach advice</p>
-          <div className="bg-blue-600/10 border border-blue-500/30 rounded-2xl rounded-tr-sm px-4 py-3">
+          <div className="bg-red-800/20 border border-red-600/30 rounded-2xl rounded-tr-sm px-4 py-3">
             <div className="flex items-center justify-between gap-4 mb-1">
-              <span className="text-xs font-semibold text-blue-400">Say this:</span>
+              <span className="text-xs font-semibold text-red-400">Say this:</span>
               <button
                 onClick={() => setExpanded(!expanded)}
                 className="text-slate-500 hover:text-slate-300 transition-colors"
@@ -338,8 +338,8 @@ function CoachingView({ context, onReset }) {
       <div className="bg-slate-900 border-b border-slate-800 px-4 py-3">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-blue-600/20 rounded-xl flex items-center justify-center">
-              <ScenarioIcon className="w-4 h-4 text-blue-400" />
+            <div className="w-9 h-9 bg-red-800/30 rounded-xl flex items-center justify-center">
+              <ScenarioIcon className="w-4 h-4 text-red-400" />
             </div>
             <div>
               <p className="font-semibold text-sm">{context.itemDescription}</p>
@@ -374,8 +374,8 @@ function CoachingView({ context, onReset }) {
             ))}
             {loading && (
               <div className="flex justify-end animate-fade-in">
-                <div className="bg-blue-600/10 border border-blue-500/30 rounded-2xl rounded-tr-sm px-4 py-3">
-                  <Loader2 className="w-4 h-4 text-blue-400 animate-spin" />
+                <div className="bg-red-800/20 border border-red-600/30 rounded-2xl rounded-tr-sm px-4 py-3">
+                  <Loader2 className="w-4 h-4 text-red-400 animate-spin" />
                 </div>
               </div>
             )}
@@ -427,7 +427,7 @@ function CoachingView({ context, onReset }) {
       {/* Coach panel — mobile (collapsible bottom sheet feel) */}
       {latestCoaching && (
         <div className="lg:hidden border-t border-slate-800 bg-slate-900 p-4 max-h-64 overflow-y-auto">
-          <p className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">Latest Advice</p>
+          <p className="text-xs font-semibold text-red-400 uppercase tracking-wider mb-3">Latest Advice</p>
           <CoachPanel
             coaching={latestCoaching}
             askingPrice={currentAskingPrice}

@@ -11,11 +11,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center group-hover:bg-blue-500 transition-colors">
+            <div className="w-8 h-8 bg-red-700 rounded-lg flex items-center justify-center group-hover:bg-red-600 transition-colors">
               <Zap className="w-4 h-4 text-white" fill="white" />
             </div>
             <span className="font-bold text-lg tracking-tight">
-              Negotiate<span className="text-blue-500">AI</span>
+              Negotiate<span className="text-red-600">AI</span>
             </span>
           </Link>
 

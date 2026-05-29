@@ -73,21 +73,21 @@ export default function Landing() {
       <section className="relative overflow-hidden">
         {/* Background glow */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-red-800/30 rounded-full blur-3xl" />
           <div className="absolute top-40 -left-40 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
           <div className="text-center max-w-3xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/30 rounded-full px-4 py-1.5 mb-8">
-              <Zap className="w-3.5 h-3.5 text-blue-400" fill="currentColor" />
-              <span className="text-blue-400 text-sm font-medium">AI-Powered Negotiation Coach</span>
+            <div className="inline-flex items-center gap-2 bg-red-800/20 border border-red-600/30 rounded-full px-4 py-1.5 mb-8">
+              <Zap className="w-3.5 h-3.5 text-red-400" fill="currentColor" />
+              <span className="text-red-400 text-sm font-medium">AI-Powered Negotiation Coach</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight tracking-tight mb-6">
               Win Every{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-blue-300 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-400 via-red-300 to-rose-300 bg-clip-text text-transparent">
                 Negotiation
               </span>
             </h1>
@@ -135,7 +135,7 @@ export default function Landing() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {SCENARIOS.map((s) => {
             const colorMap = {
-              blue: { ring: 'group-hover:ring-blue-500/50', badge: 'bg-blue-600/20 text-blue-400', btn: 'bg-blue-600 hover:bg-blue-500' },
+              blue: { ring: 'group-hover:ring-red-600/50', badge: 'bg-red-800/30 text-red-400', btn: 'bg-red-700 hover:bg-red-600' },
               emerald: { ring: 'group-hover:ring-emerald-500/50', badge: 'bg-emerald-600/20 text-emerald-400', btn: 'bg-emerald-600 hover:bg-emerald-500' },
               orange: { ring: 'group-hover:ring-orange-500/50', badge: 'bg-orange-600/20 text-orange-400', btn: 'bg-orange-600 hover:bg-orange-500' },
             }[s.color]
@@ -193,12 +193,12 @@ export default function Landing() {
               return (
                 <div key={s.step} className="relative text-center">
                   {i < STEPS.length - 1 && (
-                    <div className="hidden md:block absolute top-8 left-[60%] w-[40%] h-px bg-gradient-to-r from-blue-500/50 to-transparent" />
+                    <div className="hidden md:block absolute top-8 left-[60%] w-[40%] h-px bg-gradient-to-r from-red-600/50 to-transparent" />
                   )}
-                  <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-5 ring-1 ring-blue-500/30">
-                    <Icon className="w-7 h-7 text-blue-400" />
+                  <div className="w-16 h-16 bg-red-800/30 rounded-2xl flex items-center justify-center mx-auto mb-5 ring-1 ring-red-600/30">
+                    <Icon className="w-7 h-7 text-red-400" />
                   </div>
-                  <div className="text-blue-500/50 font-black text-4xl mb-2 font-mono">{s.step}</div>
+                  <div className="text-red-600/50 font-black text-4xl mb-2 font-mono">{s.step}</div>
                   <h3 className="text-xl font-bold mb-3">{s.title}</h3>
                   <p className="text-slate-400 leading-relaxed">{s.description}</p>
                 </div>
@@ -216,8 +216,8 @@ export default function Landing() {
               icon: Target,
               title: 'Exact Scripts',
               desc: 'No more guessing what to say. Get word-for-word phrases crafted for your exact situation.',
-              color: 'text-blue-400',
-              bg: 'bg-blue-600/10',
+              color: 'text-red-400',
+              bg: 'bg-red-800/20',
             },
             {
               icon: TrendingUp,
@@ -303,7 +303,7 @@ export default function Landing() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <div className="relative">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-96 h-96 bg-blue-600/10 rounded-full blur-3xl" />
+            <div className="w-96 h-96 bg-red-800/20 rounded-full blur-3xl" />
           </div>
           <div className="relative">
             <h2 className="text-4xl sm:text-5xl font-black mb-6">
@@ -327,10 +327,10 @@ export default function Landing() {
       <footer className="border-t border-slate-800 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-blue-600 rounded-md flex items-center justify-center">
+            <div className="w-6 h-6 bg-red-700 rounded-md flex items-center justify-center">
               <Zap className="w-3 h-3 text-white" fill="white" />
             </div>
-            <span className="font-bold text-sm">Negotiate<span className="text-blue-500">AI</span></span>
+            <span className="font-bold text-sm">Negotiate<span className="text-red-600">AI</span></span>
           </div>
           <p className="text-slate-500 text-sm">© 2025 NegotiateAI. For informational purposes only.</p>
         </div>

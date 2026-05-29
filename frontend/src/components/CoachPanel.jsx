@@ -57,13 +57,13 @@ function FairPriceBar({ min, max, current, currency }) {
         <div className="absolute inset-0 bg-green-500/30 rounded-full" />
         {/* Current price marker */}
         <div
-          className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-white shadow-lg transition-all duration-500 ${isOverpriced ? 'bg-red-500' : 'bg-blue-500'}`}
+          className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-white shadow-lg transition-all duration-500 ${isOverpriced ? 'bg-red-500' : 'bg-red-600'}`}
           style={{ left: `calc(${pct}% - 8px)` }}
         />
       </div>
       <div className="flex justify-between text-xs text-slate-400 mt-1">
         <span className="text-green-400 font-medium">{fmt(min)}</span>
-        <span className={`font-semibold ${isOverpriced ? 'text-red-400' : 'text-blue-400'}`}>
+        <span className={`font-semibold ${isOverpriced ? 'text-red-400' : 'text-red-400'}`}>
           Now: {fmt(current)}
         </span>
         <span className="text-green-400 font-medium">{fmt(max)}</span>
@@ -94,8 +94,8 @@ export default function CoachPanel({ coaching, askingPrice, currency }) {
   if (!coaching) {
     return (
       <div className="card p-8 flex flex-col items-center justify-center text-center h-full min-h-[400px]">
-        <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-4">
-          <Brain className="w-8 h-8 text-blue-400" />
+        <div className="w-16 h-16 bg-red-800/30 rounded-2xl flex items-center justify-center mb-4">
+          <Brain className="w-8 h-8 text-red-400" />
         </div>
         <h3 className="font-semibold text-lg mb-2">Your AI Coach</h3>
         <p className="text-slate-400 text-sm max-w-xs">
@@ -136,8 +136,8 @@ export default function CoachPanel({ coaching, askingPrice, currency }) {
       <div className="card p-4 space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Target className="w-4 h-4 text-blue-400" />
-            <span className="text-xs font-semibold text-blue-400 uppercase tracking-wider">Say This</span>
+            <Target className="w-4 h-4 text-red-400" />
+            <span className="text-xs font-semibold text-red-400 uppercase tracking-wider">Say This</span>
           </div>
           <CopyButton text={script} />
         </div>
