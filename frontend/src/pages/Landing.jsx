@@ -7,7 +7,6 @@ const SCENARIOS = [
     id: 'car',
     icon: Car,
     title: 'Car Deals',
-    emoji: '🚗',
     description: 'Beat dealer tactics, know fair market value, close at the right price.',
     image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80',
     color: 'blue',
@@ -17,7 +16,6 @@ const SCENARIOS = [
     id: 'rent',
     icon: Home,
     title: 'Rent Negotiation',
-    emoji: '🏠',
     description: 'Lower your monthly rent, get better terms, negotiate like a pro.',
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
     color: 'emerald',
@@ -27,7 +25,6 @@ const SCENARIOS = [
     id: 'market',
     icon: ShoppingBag,
     title: 'Market Haggling',
-    emoji: '🛍️',
     description: 'Haggle confidently at bazaars, electronics shops, and anywhere.',
     image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80',
     color: 'orange',
@@ -154,7 +151,9 @@ export default function Landing() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
-                  <span className="absolute top-4 left-4 text-3xl">{s.emoji}</span>
+                  <div className="absolute top-4 left-4 w-9 h-9 bg-black/50 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                    <s.icon className="w-5 h-5 text-white" />
+                  </div>
                 </div>
 
                 {/* Content */}
